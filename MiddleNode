@@ -1,0 +1,12 @@
+public ListNode MiddleNode(ListNode head)
+{
+ListNode first_ptr = head, second_ptr = head;
+
+while(first_ptr != null && first_ptr.next != null)
+{
+second_ptr = second_ptr.next;
+first_ptr = first_ptr.next.next;
+}
+
+return second_ptr;
+}
