@@ -1,0 +1,17 @@
+public ListNode ReverseList(ListNode head)
+{
+ListNode prev = null;
+ListNode curr = head;
+ListNode next = null;
+
+while(curr != null)
+{
+next = curr.next; // save hte next node
+curr.next = prev; // Reverse the link
+prev = curr; // move the pointer one poistion ahead
+curr = next;
+
+}
+return prev;
+
+}
